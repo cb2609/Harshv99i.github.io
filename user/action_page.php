@@ -3,7 +3,13 @@
 $firstname = $_Post['firstname'];
 $lastname = $_Post['lastname'];
 $gender = $_Post['gender'];
-$Console = $_Post['Console'];
+$bloodg = $_Post['blood group'];
+$bday= $_Post['bday'];
+$id= $_Post['userid'];
+$pass= $_Post['psw'];
+$email= $_Post['email'];
+$mobile= $_Post['usrtel'];
+$aadhar= $_Post['aadhar'];
 
 try {
     $host = "localhost";
@@ -16,12 +22,17 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "INSERT INTO userprofile("
-    . "firstname, lastname, sex, console" 
+    . "firstname, lastname, sex,bloodg,bday,id,pass,email,mobile,aadhar" 
     . " ) VALUES (" 
     . "'" . $firstname . "',"
     . "'" . $lastname . "',"
     . "'" . $gender . "',"
-    . "'" . $Console .")";
+            . "'" . $bloodg . "',"
+            . "'" . $id . "',"
+            . "'" . $pass . "',"
+            . "'" . $email . "',"
+. "'" . $mobile . "',"
+    . "'" . $aadhar .")";
 
     $conn->query($sql);
 
@@ -32,14 +43,14 @@ try {
     echo '<th>First Name</th>
           <th>Last Name</th>
           <th>Gender</th>
-          <th>Console</th>';
+
     echo '<tr>';
     foreach ($userdata as $userdata) {
     echo '<tr>';
     echo '  <td>' . $userprofile['firstname'] . '</td>';
     echo '  <td>' . $userprofile['lastname'] . '</td>';
     echo '  <td>' . $userprofile['gender'] . '</td>';
-    echo '  <td>' . $userprofile['Console'] . '</td>';
+
     echo '  </tr> ';
 }
 
