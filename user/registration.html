@@ -107,7 +107,7 @@
         
   <select name= "blood group">
       
-      
+     <option disabled value>Select Blood group</option> 
         
     <option value="A+">A+</option>
       
@@ -141,7 +141,6 @@
       
       
         
-    <option value="other">other</option>
       
       
         
@@ -217,7 +216,7 @@ E-mail:
       
       
         
-  <input type="email" name="email">
+  <input type="email" name="email" required>
       
       
         
@@ -229,7 +228,7 @@ E-mail:
       
       
         
-  <input type="tel" name="usrtel">
+  <input type="tel" name="usrtel" required >
       
       
         
@@ -241,7 +240,7 @@ Adhaar No.
       
       
         
-<textarea name="aadhar" rows="1" cols="50"></textarea>
+<input name="aadhar" type="number"  oninput="if(value.length>12)value=value.slice(0,12)" required>
       
       
         
