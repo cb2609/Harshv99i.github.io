@@ -1,15 +1,15 @@
 <?php
 
-$firstname = $_Post['firstname'];
-$lastname = $_Post['lastname'];
-$gender = $_Post['gender'];
-$bloodg = $_Post['blood group'];
-$bday= $_Post['bday'];
-$id= $_Post['userid'];
-$pass= $_Post['psw'];
-$email= $_Post['email'];
-$mobile= $_Post['usrtel'];
-$aadhar= $_Post['aadhar'];
+$firstname = $_GET['firstname'];
+$lastname = $_GET['lastname'];
+$gender = $_GET['gender'];
+$bloodg = $_GET['blood group'];
+$bday= $_GET['bday'];
+$id= $_GET['userid'];
+$pass= $_GET['psw'];
+$email= $_GET['email'];
+$mobile= $_GET['usrtel'];
+$aadhar= $_GET['aadhar'];
 
 try {
     $host = "localhost";
