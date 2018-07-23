@@ -49,15 +49,14 @@
       
       
         
-    <legend>Personal information:</legend>
+	 <legend><h2>Personal information:</h2></legend>
       
       
-        
   First name:
       
       
         
-  <input type="text" name="firstname">
+  <input type="text" name="firstname" required>
       
       
         
@@ -105,9 +104,9 @@
       
       
         
-  <select name= "blood group">
+  <select name= "blood group" required>
       
-      
+    <option disabled value>Select Blood group</option>  
         
     <option value="A+">A+</option>
       
@@ -140,8 +139,7 @@
     <option value="AB-">AB-</option>
       
       
-        
-    <option value="other">other</option>
+     
       
       
         
@@ -161,7 +159,7 @@
       
       
         
-  <input type="date" name="bday">
+  <input type="date" name="bday" required>
       
       
         
@@ -177,7 +175,7 @@
       
       
         
-<input type="text" name="userid">
+<input type="text" name="userid" required>
       
       
         
@@ -189,7 +187,7 @@ User password:<br>
       
       
         
-<input type="password" name="psw">
+<input type="password" name="psw" required>
       
       
         
@@ -217,7 +215,7 @@ E-mail:
       
       
         
-  <input type="email" name="email">
+  <input type="email" name="email" required>
       
       
         
@@ -229,7 +227,7 @@ E-mail:
       
       
         
-  <input type="tel" name="usrtel">
+  <input type="tel" name="usrtel" required>
       
       
         
@@ -240,9 +238,7 @@ E-mail:
 Adhaar No.
       
       
-        
-<textarea name="aadhar" rows="1" cols="50"></textarea>
-      
+<input name="aadhar" type="number"  oninput="if(value.length>12)value=value.slice(0,12)" required>
       
         
   <br><br>
